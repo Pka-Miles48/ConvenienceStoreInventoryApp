@@ -32,14 +32,14 @@
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
-            button4 = new Button();
+            txtName = new TextBox();
+            txtCategory = new TextBox();
+            txtPrice = new TextBox();
+            txtStock = new TextBox();
+            btnAddProduct = new Button();
+            btnUpdateProduct = new Button();
+            btnLookupProduct = new Button();
+            btnProcessSale = new Button();
             SuspendLayout();
             // 
             // label1
@@ -78,83 +78,87 @@
             label4.TabIndex = 3;
             label4.Text = "Stock:";
             // 
-            // textBox1
+            // txtName
             // 
-            textBox1.Location = new Point(150, 56);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
-            textBox1.TabIndex = 4;
+            txtName.Location = new Point(150, 56);
+            txtName.Name = "txtName";
+            txtName.Size = new Size(100, 23);
+            txtName.TabIndex = 4;
             // 
-            // textBox2
+            // txtCategory
             // 
-            textBox2.Location = new Point(150, 120);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(100, 23);
-            textBox2.TabIndex = 5;
+            txtCategory.Location = new Point(150, 120);
+            txtCategory.Name = "txtCategory";
+            txtCategory.Size = new Size(100, 23);
+            txtCategory.TabIndex = 5;
             // 
-            // textBox3
+            // txtPrice
             // 
-            textBox3.Location = new Point(150, 184);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(100, 23);
-            textBox3.TabIndex = 6;
+            txtPrice.Location = new Point(150, 184);
+            txtPrice.Name = "txtPrice";
+            txtPrice.Size = new Size(100, 23);
+            txtPrice.TabIndex = 6;
             // 
-            // textBox4
+            // txtStock
             // 
-            textBox4.Location = new Point(150, 248);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(100, 23);
-            textBox4.TabIndex = 7;
+            txtStock.Location = new Point(150, 248);
+            txtStock.Name = "txtStock";
+            txtStock.Size = new Size(100, 23);
+            txtStock.TabIndex = 7;
             // 
-            // button1
+            // btnAddProduct
             // 
-            button1.Location = new Point(314, 44);
-            button1.Name = "button1";
-            button1.Size = new Size(103, 45);
-            button1.TabIndex = 8;
-            button1.Text = "Add Product";
-            button1.UseVisualStyleBackColor = true;
+            btnAddProduct.Location = new Point(314, 44);
+            btnAddProduct.Name = "btnAddProduct";
+            btnAddProduct.Size = new Size(103, 45);
+            btnAddProduct.TabIndex = 8;
+            btnAddProduct.Text = "Add Product";
+            btnAddProduct.UseVisualStyleBackColor = true;
+            btnAddProduct.Click += btnAddProduct_Click;
             // 
-            // button2
+            // btnUpdateProduct
             // 
-            button2.Location = new Point(314, 107);
-            button2.Name = "button2";
-            button2.Size = new Size(103, 45);
-            button2.TabIndex = 9;
-            button2.Text = "Update Product";
-            button2.UseVisualStyleBackColor = true;
+            btnUpdateProduct.Location = new Point(314, 107);
+            btnUpdateProduct.Name = "btnUpdateProduct";
+            btnUpdateProduct.Size = new Size(103, 45);
+            btnUpdateProduct.TabIndex = 9;
+            btnUpdateProduct.Text = "Update Product";
+            btnUpdateProduct.UseVisualStyleBackColor = true;
+            btnUpdateProduct.Click += btnUpdateProduct_Click;
             // 
-            // button3
+            // btnLookupProduct
             // 
-            button3.Location = new Point(314, 170);
-            button3.Name = "button3";
-            button3.Size = new Size(103, 45);
-            button3.TabIndex = 10;
-            button3.Text = "Lookup Product";
-            button3.UseVisualStyleBackColor = true;
+            btnLookupProduct.Location = new Point(314, 170);
+            btnLookupProduct.Name = "btnLookupProduct";
+            btnLookupProduct.Size = new Size(103, 45);
+            btnLookupProduct.TabIndex = 10;
+            btnLookupProduct.Text = "Lookup Product";
+            btnLookupProduct.UseVisualStyleBackColor = true;
+            btnLookupProduct.Click += btnLookupProduct_Click;
             // 
-            // button4
+            // btnProcessSale
             // 
-            button4.Location = new Point(314, 233);
-            button4.Name = "button4";
-            button4.Size = new Size(103, 45);
-            button4.TabIndex = 11;
-            button4.Text = "Process Sale";
-            button4.UseVisualStyleBackColor = true;
+            btnProcessSale.Location = new Point(314, 233);
+            btnProcessSale.Name = "btnProcessSale";
+            btnProcessSale.Size = new Size(103, 45);
+            btnProcessSale.TabIndex = 11;
+            btnProcessSale.Text = "Process Sale";
+            btnProcessSale.UseVisualStyleBackColor = true;
+            btnProcessSale.Click += btnProcessSale_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(486, 323);
-            Controls.Add(button4);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(btnProcessSale);
+            Controls.Add(btnLookupProduct);
+            Controls.Add(btnUpdateProduct);
+            Controls.Add(btnAddProduct);
+            Controls.Add(txtStock);
+            Controls.Add(txtPrice);
+            Controls.Add(txtCategory);
+            Controls.Add(txtName);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
@@ -171,13 +175,13 @@
         private Label label2;
         private Label label3;
         private Label label4;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
-        private Button button1;
-        private Button button2;
-        private Button button3;
-        private Button button4;
+        private TextBox txtName;
+        private TextBox txtCategory;
+        private TextBox txtPrice;
+        private TextBox txtStock;
+        private Button btnAddProduct;
+        private Button btnUpdateProduct;
+        private Button btnLookupProduct;
+        private Button btnProcessSale;
     }
 }
