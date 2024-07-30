@@ -9,39 +9,58 @@ namespace ConvenienceStoreInventoryApp
     public class Product
     {
         // Properties
-        public int ID { get; set; }
+
+        /// <summary>
+        /// Product name
+        /// </summary>
         public string Name { get; set; }
+        /// <summary>
+        /// Product price
+        /// </summary>
         public decimal Price { get; set; }
+        /// <summary>
+        /// Amount of product in the inventory
+        /// </summary>
         public int Quantity { get; set; }
+        /// <summary>
+        /// Unique Product ID
+        /// </summary>
+        private int _productId;
+
+        /// <summary>
+        /// The product ID should be unique.
+        /// </summary>
+        public int ProductId
+        {
+            get { return _productId; }
+            set { _productId = value; }
+        }
 
         /// <summary>
         /// Constructor for the Products
         /// </summary>
-        /// <param name="id">The id number of the product non settable</param>
         /// <param name="name">The name of the product</param>
         /// <param name="price">The price of the product</param>
         /// <param name="quantity">The amount of items for the product</param>
-        public Product(int id, string name, decimal price, int quantity)
+        public Product(string name, decimal price, int quantity)
         {
-            ID = id;
             Name = name;
             Price = price;
             Quantity = quantity;
         }
 
-        // Method to display product details
-        public void DisplayProductInfo()
+        /// <summary>
+        /// Method to display product details
+        /// </summary>
+        public string DisplayProductInfo()
         {
-            Console.WriteLine($"ID: {ID}");
-            Console.WriteLine($"Name: {Name}");
-            Console.WriteLine($"Price: {Price:C}");
-            Console.WriteLine($"Quantity: {Quantity}");
+            return $"Product Name: {Name}, Product Price: {Price}, and Quantity: {Quantity}.";
         }
 
-        // Method to update quantity
-        public void UpdateQuantity(int amount)
+
+        public override string ToString()
         {
-            Quantity += amount;
+            return DisplayProductInfo();
         }
     }
 
