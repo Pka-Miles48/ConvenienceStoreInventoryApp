@@ -22,6 +22,17 @@ namespace ConvenienceStoreInventoryApp
         /// Amount of product in the inventory
         /// </summary>
         public int Quantity { get; set; }
+
+        /// <summary>
+        /// The category the product fits in the store
+        /// </summary>
+        public string Categories { get; set; }
+
+        /// <summary>
+        /// A short description of the product
+        /// </summary>
+        public string Description { get; set; }
+
         /// <summary>
         /// Unique Product ID
         /// </summary>
@@ -42,11 +53,13 @@ namespace ConvenienceStoreInventoryApp
         /// <param name="name">The name of the product</param>
         /// <param name="price">The price of the product</param>
         /// <param name="quantity">The amount of items for the product</param>
-        public Product(string name, decimal price, int quantity)
+        public Product(string name, decimal price, int quantity, string category, string description)
         {
             Name = name;
             Price = price;
             Quantity = quantity;
+            Categories = category;
+            Description = description;
         }
 
         /// <summary>
@@ -61,6 +74,14 @@ namespace ConvenienceStoreInventoryApp
         public override string ToString()
         {
             return DisplayProductInfo();
+        }
+
+        public decimal getProductInventoryValue()
+        {
+            decimal price = Price;
+            decimal quantity = Quantity;
+            return price * quantity;
+
         }
     }
 
