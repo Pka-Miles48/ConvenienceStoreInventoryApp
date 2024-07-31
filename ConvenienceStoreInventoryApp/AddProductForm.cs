@@ -24,14 +24,17 @@ namespace ConvenienceStoreInventoryApp
 
         private void btnAddProduct_Click(object sender, EventArgs e)
         {
+            //Get info from the form
             string productName = txtProductName.Text;
             decimal productPrice = Convert.ToDecimal(txtPrice.Text);
             int quantity = Convert.ToInt32(txtQuantity.Text);
             string category = txtCategory.Text;
             string description = txtDescription.Text;
 
+            //Add info into a new product object
             Product product = new Product(productName, productPrice, quantity, category, description);
 
+            //Send object to ProductDb for storage
             ProductDb.Add(product);
         }
     }
