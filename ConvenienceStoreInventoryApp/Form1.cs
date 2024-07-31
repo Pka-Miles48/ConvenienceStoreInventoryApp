@@ -36,6 +36,8 @@ namespace ConvenienceStoreInventoryApp
         private void btnAddProduct_Click(object sender, EventArgs e)
         {
             // Add product logic
+            AddProductForm addProduct = new AddProductForm();
+            addProduct.ShowDialog();
         }
 
         private void btnUpdateProduct_Click(object sender, EventArgs e)
