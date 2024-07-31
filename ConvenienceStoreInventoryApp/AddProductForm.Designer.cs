@@ -73,21 +73,21 @@
             txtProductName.Location = new Point(135, 49);
             txtProductName.Name = "txtProductName";
             txtProductName.Size = new Size(193, 23);
-            txtProductName.TabIndex = 3;
+            txtProductName.TabIndex = 1;
             // 
             // txtPrice
             // 
             txtPrice.Location = new Point(135, 98);
             txtPrice.Name = "txtPrice";
             txtPrice.Size = new Size(193, 23);
-            txtPrice.TabIndex = 4;
+            txtPrice.TabIndex = 2;
             // 
             // txtQuantity
             // 
             txtQuantity.Location = new Point(135, 151);
             txtQuantity.Name = "txtQuantity";
             txtQuantity.Size = new Size(193, 23);
-            txtQuantity.TabIndex = 5;
+            txtQuantity.TabIndex = 3;
             // 
             // btnAddProduct
             // 
@@ -97,13 +97,14 @@
             btnAddProduct.TabIndex = 6;
             btnAddProduct.Text = "Add Product";
             btnAddProduct.UseVisualStyleBackColor = true;
+            btnAddProduct.Click += btnAddProduct_Click;
             // 
             // txtCategory
             // 
             txtCategory.Location = new Point(135, 213);
             txtCategory.Name = "txtCategory";
             txtCategory.Size = new Size(193, 23);
-            txtCategory.TabIndex = 7;
+            txtCategory.TabIndex = 4;
             // 
             // lblCategory
             // 
@@ -119,7 +120,7 @@
             txtDescription.Location = new Point(135, 272);
             txtDescription.Name = "txtDescription";
             txtDescription.Size = new Size(193, 23);
-            txtDescription.TabIndex = 9;
+            txtDescription.TabIndex = 5;
             // 
             // lblDescription
             // 
