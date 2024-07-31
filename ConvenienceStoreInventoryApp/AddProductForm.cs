@@ -21,5 +21,18 @@ namespace ConvenienceStoreInventoryApp
         {
 
         }
+
+        private void btnAddProduct_Click(object sender, EventArgs e)
+        {
+            string productName = txtProductName.Text;
+            decimal productPrice = Convert.ToDecimal(txtPrice.Text);
+            int quantity = Convert.ToInt32(txtQuantity.Text);
+            string category = txtCategory.Text;
+            string description = txtDescription.Text;
+
+            Product product = new Product(productName, productPrice, quantity, category, description);
+
+            ProductDb.Add(product);
+        }
     }
 }
