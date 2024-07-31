@@ -28,84 +28,124 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            button1 = new Button();
+            lblProductName = new Label();
+            lblPrice = new Label();
+            lblQuantity = new Label();
+            txtProductName = new TextBox();
+            txtPrice = new TextBox();
+            txtQuantity = new TextBox();
+            btnAddProduct = new Button();
+            txtCategory = new TextBox();
+            lblCategory = new Label();
+            txtDescription = new TextBox();
+            lblDescription = new Label();
             SuspendLayout();
             // 
-            // label1
+            // lblProductName
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(44, 47);
-            label1.Name = "label1";
-            label1.Size = new Size(84, 15);
-            label1.TabIndex = 0;
-            label1.Text = "Product Name";
+            lblProductName.AutoSize = true;
+            lblProductName.Location = new Point(32, 52);
+            lblProductName.Name = "lblProductName";
+            lblProductName.Size = new Size(84, 15);
+            lblProductName.TabIndex = 0;
+            lblProductName.Text = "Product Name";
             // 
-            // label2
+            // lblPrice
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(44, 161);
-            label2.Name = "label2";
-            label2.Size = new Size(38, 15);
-            label2.TabIndex = 1;
-            label2.Text = "label2";
+            lblPrice.AutoSize = true;
+            lblPrice.Location = new Point(32, 101);
+            lblPrice.Name = "lblPrice";
+            lblPrice.Size = new Size(33, 15);
+            lblPrice.TabIndex = 1;
+            lblPrice.Text = "Price";
             // 
-            // label3
+            // lblQuantity
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(44, 259);
-            label3.Name = "label3";
-            label3.Size = new Size(38, 15);
-            label3.TabIndex = 2;
-            label3.Text = "label3";
+            lblQuantity.AutoSize = true;
+            lblQuantity.Location = new Point(32, 154);
+            lblQuantity.Name = "lblQuantity";
+            lblQuantity.Size = new Size(53, 15);
+            lblQuantity.TabIndex = 2;
+            lblQuantity.Text = "Quantity";
             // 
-            // textBox1
+            // txtProductName
             // 
-            textBox1.Location = new Point(135, 49);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(193, 23);
-            textBox1.TabIndex = 3;
+            txtProductName.Location = new Point(135, 49);
+            txtProductName.Name = "txtProductName";
+            txtProductName.Size = new Size(193, 23);
+            txtProductName.TabIndex = 3;
             // 
-            // textBox2
+            // txtPrice
             // 
-            textBox2.Location = new Point(135, 161);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(193, 23);
-            textBox2.TabIndex = 4;
+            txtPrice.Location = new Point(135, 98);
+            txtPrice.Name = "txtPrice";
+            txtPrice.Size = new Size(193, 23);
+            txtPrice.TabIndex = 4;
             // 
-            // textBox3
+            // txtQuantity
             // 
-            textBox3.Location = new Point(135, 259);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(193, 23);
-            textBox3.TabIndex = 5;
+            txtQuantity.Location = new Point(135, 151);
+            txtQuantity.Name = "txtQuantity";
+            txtQuantity.Size = new Size(193, 23);
+            txtQuantity.TabIndex = 5;
             // 
-            // button1
+            // btnAddProduct
             // 
-            button1.Location = new Point(47, 341);
-            button1.Name = "button1";
-            button1.Size = new Size(266, 63);
-            button1.TabIndex = 6;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
+            btnAddProduct.Location = new Point(47, 341);
+            btnAddProduct.Name = "btnAddProduct";
+            btnAddProduct.Size = new Size(266, 63);
+            btnAddProduct.TabIndex = 6;
+            btnAddProduct.Text = "Add Product";
+            btnAddProduct.UseVisualStyleBackColor = true;
+            // 
+            // txtCategory
+            // 
+            txtCategory.Location = new Point(135, 213);
+            txtCategory.Name = "txtCategory";
+            txtCategory.Size = new Size(193, 23);
+            txtCategory.TabIndex = 7;
+            // 
+            // lblCategory
+            // 
+            lblCategory.AutoSize = true;
+            lblCategory.Location = new Point(32, 216);
+            lblCategory.Name = "lblCategory";
+            lblCategory.Size = new Size(55, 15);
+            lblCategory.TabIndex = 8;
+            lblCategory.Text = "Category";
+            // 
+            // txtDescription
+            // 
+            txtDescription.Location = new Point(135, 272);
+            txtDescription.Name = "txtDescription";
+            txtDescription.Size = new Size(193, 23);
+            txtDescription.TabIndex = 9;
+            // 
+            // lblDescription
+            // 
+            lblDescription.AutoSize = true;
+            lblDescription.Location = new Point(32, 275);
+            lblDescription.Name = "lblDescription";
+            lblDescription.Size = new Size(67, 15);
+            lblDescription.TabIndex = 10;
+            lblDescription.Text = "Description";
             // 
             // AddProductForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(375, 439);
-            Controls.Add(button1);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(label1);
+            Controls.Add(lblDescription);
+            Controls.Add(txtDescription);
+            Controls.Add(lblCategory);
+            Controls.Add(txtCategory);
+            Controls.Add(btnAddProduct);
+            Controls.Add(txtQuantity);
+            Controls.Add(txtPrice);
+            Controls.Add(txtProductName);
+            Controls.Add(lblQuantity);
+            Controls.Add(lblPrice);
+            Controls.Add(lblProductName);
             Name = "AddProductForm";
             Text = "AddProductForm";
             Load += AddProductForm_Load;
@@ -115,12 +155,16 @@
 
         #endregion
 
-        private Label label1;
-        private Label label2;
-        private Label label3;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private Button button1;
+        private Label lblProductName;
+        private Label lblPrice;
+        private Label lblQuantity;
+        private TextBox txtProductName;
+        private TextBox txtPrice;
+        private TextBox txtQuantity;
+        private Button btnAddProduct;
+        private TextBox txtCategory;
+        private Label lblCategory;
+        private TextBox txtDescription;
+        private Label lblDescription;
     }
 }
