@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConvenienceStoreInventoryApp
 {
-    static class ProductDb
+    public static class ProductDb
     {
         public static void Add(Product product)
         {
@@ -15,7 +15,7 @@ namespace ConvenienceStoreInventoryApp
 
         public static List<Product> GetAllProducts()
         {
-            throw new NotImplementedException();
+            return new List<Product>();
         }
 
         public static void Update(Product product)
