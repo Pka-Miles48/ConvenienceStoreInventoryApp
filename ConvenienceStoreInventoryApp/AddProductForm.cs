@@ -36,6 +36,11 @@ namespace ConvenienceStoreInventoryApp
 
             //Send object to ProductDb for storage
             ProductDb.Add(product);
+            
+            //Show that the product was added to the db
+            MessageBox.Show("Added Product Successfully");
+            //close window
+            Close();
         }
     }
 }
