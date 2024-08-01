@@ -1,5 +1,5 @@
 namespace ConvenienceStoreInventoryApp
-{ 
+{
     public partial class Form1 : Form
     {
         private Store store = new Store();
@@ -94,7 +94,7 @@ namespace ConvenienceStoreInventoryApp
                 MessageBox.Show("Product added successfully!");
 
                 // Clear the input fields
-                txtId.Clear();               
+                txtId.Clear();
                 txtName.Clear();
                 txtCategory.Clear();
                 txtPrice.Clear();
