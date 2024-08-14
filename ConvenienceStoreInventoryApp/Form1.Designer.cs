@@ -79,9 +79,9 @@
             // 
             lstProducts.FormattingEnabled = true;
             lstProducts.ItemHeight = 15;
-            lstProducts.Location = new Point(16, 30);
+            lstProducts.Location = new Point(22, 44);
             lstProducts.Name = "lstProducts";
-            lstProducts.Size = new Size(256, 184);
+            lstProducts.Size = new Size(263, 214);
             lstProducts.TabIndex = 12;
             // 
             // Form1

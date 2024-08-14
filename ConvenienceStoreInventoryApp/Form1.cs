@@ -31,7 +31,7 @@ namespace ConvenienceStoreInventoryApp
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            List<Product> products = new ConvenienceStoreInventoryApp.ProductDb.GetAllProducts();
+            List<Product> products = ProductDb.GetAllProducts();
         }
     }
 }
