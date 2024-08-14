@@ -15,7 +15,7 @@ namespace ConvenienceStoreInventoryApp
 
         public static List<Product> GetAllProducts()
         {
-            throw new NotImplementedException();
+            return new List<Product>();
         }
 
         public static void Update(Product product)

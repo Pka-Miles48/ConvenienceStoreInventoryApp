@@ -17,7 +17,7 @@ namespace ConvenienceStoreInventoryApp
         /// <summary>
         /// Product price
         /// </summary>
-        public decimal Price { get; set; }
+        public double Price { get; set; }
         /// <summary>
         /// Amount of product in the inventory
         /// </summary>
@@ -53,7 +53,7 @@ namespace ConvenienceStoreInventoryApp
         /// <param name="name">The name of the product</param>
         /// <param name="price">The price of the product</param>
         /// <param name="quantity">The amount of items for the product</param>
-        public Product(string name, decimal price, int quantity, string category, string description)
+        public Product(string name, double price, int quantity, string category, string description)
         {
             Name = name;
             Price = price;
@@ -76,10 +76,10 @@ namespace ConvenienceStoreInventoryApp
             return DisplayProductInfo();
         }
 
-        public decimal getProductInventoryValue()
+        public double getProductInventoryValue()
         {
-            decimal price = Price;
-            decimal quantity = Quantity;
+            double price = Price;
+            int quantity = Quantity;
             return price * quantity;
 
         }

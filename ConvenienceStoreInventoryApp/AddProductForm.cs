@@ -26,7 +26,7 @@ namespace ConvenienceStoreInventoryApp
         {
             //Get info from the form
             string productName = txtProductName.Text;
-            decimal productPrice = Convert.ToDecimal(txtPrice.Text);
+            double productPrice = Convert.ToDouble(txtPrice.Text);
             int quantity = Convert.ToInt32(txtQuantity.Text);
             string category = txtCategory.Text;
             string description = txtDescription.Text;
