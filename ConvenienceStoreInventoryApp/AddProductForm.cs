@@ -15,6 +15,7 @@ namespace ConvenienceStoreInventoryApp
         public AddProductForm()
         {
             InitializeComponent();
+            btnAddProduct.Enabled = false; //Disables add button until valid data is entered
         }
 
         private void AddProductForm_Load(object sender, EventArgs e)
