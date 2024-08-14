@@ -26,21 +26,39 @@ namespace ConvenienceStoreInventoryApp
         {
             //Get info from the form
             string productName = txtProductName.Text;
-            double productPrice = Convert.ToDouble(txtPrice.Text);
-            int quantity = Convert.ToInt32(txtQuantity.Text);
+            TextBox productPrice = txtPrice;
+            TextBox productQuantity = txtQuantity;
             string category = txtCategory.Text;
             string description = txtDescription.Text;
 
-            //Add info into a new product object
-            Product product = new Product(productName, productPrice, quantity, category, description);
+            double price = Validator.ValidNumberInTextbox(productPrice);
+            double quantity = Validator.ValidNumberInTextbox(productQuantity);
 
-            //Send object to ProductDb for storage
-            ProductDb.Add(product);
+            if (Validator.ValidTextInput(productName, price, quantity, category, description) )
+            {
+                //Add info into a new product object
+                Product product = new Product(productName, price, quantity, category, description);
+
+                //Send object to ProductDb for storage
+                //ProductDb.Add(product);
+
+                //Show that the product was added to the db
+                MessageBox.Show("Added Product Successfully");
+                //close window
+                Close();
+            }
+            else
+            {
+                throw new ArgumentException("Entered invalid information.");
+            }
             
-            //Show that the product was added to the db
-            MessageBox.Show("Added Product Successfully");
-            //close window
-            Close();
+
+            
+
+
+
+
+            
         }
     }
 }

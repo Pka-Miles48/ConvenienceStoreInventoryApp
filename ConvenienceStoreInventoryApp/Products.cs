@@ -21,7 +21,7 @@ namespace ConvenienceStoreInventoryApp
         /// <summary>
         /// Amount of product in the inventory
         /// </summary>
-        public int Quantity { get; set; }
+        public double Quantity { get; set; }
 
         /// <summary>
         /// The category the product fits in the store
@@ -53,7 +53,7 @@ namespace ConvenienceStoreInventoryApp
         /// <param name="name">The name of the product</param>
         /// <param name="price">The price of the product</param>
         /// <param name="quantity">The amount of items for the product</param>
-        public Product(string name, double price, int quantity, string category, string description)
+        public Product(string name, double price, double quantity, string category, string description)
         {
             Name = name;
             Price = price;
@@ -79,7 +79,7 @@ namespace ConvenienceStoreInventoryApp
         public double getProductInventoryValue()
         {
             double price = Price;
-            int quantity = Quantity;
+            double quantity = Quantity;
             return price * quantity;
 
         }
