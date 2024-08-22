@@ -112,7 +112,7 @@
             // 
             // btnAddProduct
             // 
-            btnAddProduct.Location = new Point(314, 44);
+            btnAddProduct.Location = new Point(314, 63);
             btnAddProduct.Name = "btnAddProduct";
             btnAddProduct.Size = new Size(103, 45);
             btnAddProduct.TabIndex = 8;
@@ -122,7 +122,7 @@
             // 
             // btnUpdateProduct
             // 
-            btnUpdateProduct.Location = new Point(314, 107);
+            btnUpdateProduct.Location = new Point(314, 116);
             btnUpdateProduct.Name = "btnUpdateProduct";
             btnUpdateProduct.Size = new Size(103, 45);
             btnUpdateProduct.TabIndex = 9;
@@ -132,7 +132,7 @@
             // 
             // btnLookupProduct
             // 
-            btnLookupProduct.Location = new Point(314, 170);
+            btnLookupProduct.Location = new Point(314, 169);
             btnLookupProduct.Name = "btnLookupProduct";
             btnLookupProduct.Size = new Size(103, 45);
             btnLookupProduct.TabIndex = 10;
@@ -142,7 +142,7 @@
             // 
             // btnProcessSale
             // 
-            btnProcessSale.Location = new Point(314, 233);
+            btnProcessSale.Location = new Point(314, 222);
             btnProcessSale.Name = "btnProcessSale";
             btnProcessSale.Size = new Size(103, 45);
             btnProcessSale.TabIndex = 11;
@@ -186,7 +186,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(486, 323);
+            ClientSize = new Size(486, 331);
             Controls.Add(txtQuantity);
             Controls.Add(label6);
             Controls.Add(txtStock);

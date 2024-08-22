@@ -87,5 +87,10 @@ namespace ConvenienceStoreInventoryApp
                 Console.WriteLine("Insufficient stock or product not found.");
             }
         }
+
+        internal IEnumerable<object> GetAllProducts()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
