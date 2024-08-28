@@ -44,6 +44,7 @@
             btnUpdateProduct = new Button();
             btnLookupProduct = new Button();
             btnProcessSale = new Button();
+            btnTotalPrice = new Button();
             SuspendLayout();
             // 
             // label1
@@ -144,7 +145,7 @@
             // 
             // btnAddProduct
             // 
-            btnAddProduct.Location = new Point(312, 64);
+            btnAddProduct.Location = new Point(308, 40);
             btnAddProduct.Name = "btnAddProduct";
             btnAddProduct.Size = new Size(103, 45);
             btnAddProduct.TabIndex = 8;
@@ -154,7 +155,7 @@
             // 
             // btnUpdateProduct
             // 
-            btnUpdateProduct.Location = new Point(312, 116);
+            btnUpdateProduct.Location = new Point(308, 93);
             btnUpdateProduct.Name = "btnUpdateProduct";
             btnUpdateProduct.Size = new Size(103, 45);
             btnUpdateProduct.TabIndex = 9;
@@ -164,7 +165,7 @@
             // 
             // btnLookupProduct
             // 
-            btnLookupProduct.Location = new Point(312, 168);
+            btnLookupProduct.Location = new Point(308, 146);
             btnLookupProduct.Name = "btnLookupProduct";
             btnLookupProduct.Size = new Size(103, 45);
             btnLookupProduct.TabIndex = 10;
@@ -174,7 +175,7 @@
             // 
             // btnProcessSale
             // 
-            btnProcessSale.Location = new Point(312, 220);
+            btnProcessSale.Location = new Point(308, 199);
             btnProcessSale.Name = "btnProcessSale";
             btnProcessSale.Size = new Size(103, 45);
             btnProcessSale.TabIndex = 11;
@@ -182,11 +183,23 @@
             btnProcessSale.UseVisualStyleBackColor = true;
             btnProcessSale.Click += btnProcessSale_Click;
             // 
+            // btnTotalPrice
+            // 
+            btnTotalPrice.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnTotalPrice.Location = new Point(308, 252);
+            btnTotalPrice.Name = "btnTotalPrice";
+            btnTotalPrice.Size = new Size(103, 45);
+            btnTotalPrice.TabIndex = 16;
+            btnTotalPrice.Text = "Total Price";
+            btnTotalPrice.UseVisualStyleBackColor = true;
+            btnTotalPrice.Click += btnTotalPrice_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(486, 331);
+            Controls.Add(btnTotalPrice);
             Controls.Add(txtQuantity);
             Controls.Add(label6);
             Controls.Add(txtStock);
@@ -227,5 +240,6 @@
         private Button btnUpdateProduct;
         private Button btnLookupProduct;
         private Button btnProcessSale;
+        private Button btnTotalPrice;
     }
 }
