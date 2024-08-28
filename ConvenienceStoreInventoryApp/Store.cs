@@ -12,6 +12,8 @@ namespace ConvenienceStoreInventoryApp
     /// </summary>
     public class Store
     {
+        private object products;
+
         /// <summary>
         /// Gets or sets the list of products in the store.
         /// </summary>

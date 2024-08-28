@@ -32,18 +32,18 @@
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
+            label5 = new Label();
+            label6 = new Label();
             txtId = new TextBox();
             txtName = new TextBox();
             txtCategory = new TextBox();
             txtPrice = new TextBox();
+            txtStock = new TextBox();
+            txtQuantity = new TextBox();
             btnAddProduct = new Button();
             btnUpdateProduct = new Button();
             btnLookupProduct = new Button();
             btnProcessSale = new Button();
-            label5 = new Label();
-            txtStock = new TextBox();
-            label6 = new Label();
-            txtQuantity = new TextBox();
             SuspendLayout();
             // 
             // label1
@@ -82,6 +82,24 @@
             label4.TabIndex = 3;
             label4.Text = "Price:";
             // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(51, 240);
+            label5.Name = "label5";
+            label5.Size = new Size(39, 15);
+            label5.TabIndex = 12;
+            label5.Text = "Stock:";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(51, 292);
+            label6.Name = "label6";
+            label6.Size = new Size(56, 15);
+            label6.TabIndex = 14;
+            label6.Text = "Quantity:";
+            // 
             // txtId
             // 
             txtId.Location = new Point(155, 24);
@@ -109,6 +127,20 @@
             txtPrice.Name = "txtPrice";
             txtPrice.Size = new Size(100, 23);
             txtPrice.TabIndex = 7;
+            // 
+            // txtStock
+            // 
+            txtStock.Location = new Point(155, 232);
+            txtStock.Name = "txtStock";
+            txtStock.Size = new Size(100, 23);
+            txtStock.TabIndex = 13;
+            // 
+            // txtQuantity
+            // 
+            txtQuantity.Location = new Point(155, 284);
+            txtQuantity.Name = "txtQuantity";
+            txtQuantity.Size = new Size(100, 23);
+            txtQuantity.TabIndex = 15;
             // 
             // btnAddProduct
             // 
@@ -149,38 +181,6 @@
             btnProcessSale.Text = "Process Sale";
             btnProcessSale.UseVisualStyleBackColor = true;
             btnProcessSale.Click += btnProcessSale_Click;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(51, 240);
-            label5.Name = "label5";
-            label5.Size = new Size(39, 15);
-            label5.TabIndex = 12;
-            label5.Text = "Stock:";
-            // 
-            // txtStock
-            // 
-            txtStock.Location = new Point(155, 232);
-            txtStock.Name = "txtStock";
-            txtStock.Size = new Size(100, 23);
-            txtStock.TabIndex = 13;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Location = new Point(51, 292);
-            label6.Name = "label6";
-            label6.Size = new Size(56, 15);
-            label6.TabIndex = 14;
-            label6.Text = "Quantity:";
-            // 
-            // txtQuantity
-            // 
-            txtQuantity.Location = new Point(155, 284);
-            txtQuantity.Name = "txtQuantity";
-            txtQuantity.Size = new Size(100, 23);
-            txtQuantity.TabIndex = 15;
             // 
             // Form1
             // 
