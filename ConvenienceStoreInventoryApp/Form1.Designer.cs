@@ -112,7 +112,7 @@
             // 
             // btnAddProduct
             // 
-            btnAddProduct.Location = new Point(314, 63);
+            btnAddProduct.Location = new Point(312, 64);
             btnAddProduct.Name = "btnAddProduct";
             btnAddProduct.Size = new Size(103, 45);
             btnAddProduct.TabIndex = 8;
@@ -122,7 +122,7 @@
             // 
             // btnUpdateProduct
             // 
-            btnUpdateProduct.Location = new Point(314, 116);
+            btnUpdateProduct.Location = new Point(312, 116);
             btnUpdateProduct.Name = "btnUpdateProduct";
             btnUpdateProduct.Size = new Size(103, 45);
             btnUpdateProduct.TabIndex = 9;
@@ -132,7 +132,7 @@
             // 
             // btnLookupProduct
             // 
-            btnLookupProduct.Location = new Point(314, 169);
+            btnLookupProduct.Location = new Point(312, 168);
             btnLookupProduct.Name = "btnLookupProduct";
             btnLookupProduct.Size = new Size(103, 45);
             btnLookupProduct.TabIndex = 10;
@@ -142,7 +142,7 @@
             // 
             // btnProcessSale
             // 
-            btnProcessSale.Location = new Point(314, 222);
+            btnProcessSale.Location = new Point(312, 220);
             btnProcessSale.Name = "btnProcessSale";
             btnProcessSale.Size = new Size(103, 45);
             btnProcessSale.TabIndex = 11;
@@ -215,17 +215,17 @@
         private Label label2;
         private Label label3;
         private Label label4;
+        private Label label5;
+        private Label label6;
         private TextBox txtId;
         private TextBox txtName;
         private TextBox txtCategory;
         private TextBox txtPrice;
+        private TextBox txtStock;
+        private TextBox txtQuantity;
         private Button btnAddProduct;
         private Button btnUpdateProduct;
         private Button btnLookupProduct;
         private Button btnProcessSale;
-        private Label label5;
-        private TextBox txtStock;
-        private Label label6;
-        private TextBox txtQuantity;
     }
 }
