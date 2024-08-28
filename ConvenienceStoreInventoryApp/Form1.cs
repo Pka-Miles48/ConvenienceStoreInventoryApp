@@ -113,6 +113,40 @@ namespace ConvenienceStoreInventoryApp
             }
         }
 
+        // Event handler for displaying the total price of all products
+        private void btnTotalPrice_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                decimal totalPrice = 0;
+                var products = store.GetProducts();
+
+                if (products == null)
+                {
+                    MessageBox.Show("Products list is null.");
+                    return;
+                }
+
+                if (products.Count == 0)
+                {
+                    MessageBox.Show("No products available.");
+                    return;
+                }
+
+                foreach (var product in products)
+                {
+                    totalPrice += product.Price * product.Stock;
+                }
+
+                MessageBox.Show($"Total price of all products: {totalPrice:C}");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error calculating total price: {ex.Message}");
+            }
+        }
+
+
         // Method to clear the input fields
         private void ClearInputFields()
         {

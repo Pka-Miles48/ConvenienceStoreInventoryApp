@@ -90,6 +90,11 @@ namespace ConvenienceStoreInventoryApp
             }
         }
 
+        public List<Product> GetProducts()
+        {
+            return (List<Product>)products;
+        }
+
         internal IEnumerable<object> GetAllProducts()
         {
             throw new NotImplementedException();
