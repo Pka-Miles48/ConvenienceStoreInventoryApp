@@ -1,4 +1,4 @@
-﻿namespace ConvenienceStoreInventoryApp
+namespace ConvenienceStoreInventoryApp
 {
     partial class Form1
     {
@@ -45,6 +45,7 @@
             btnLookupProduct = new Button();
             btnProcessSale = new Button();
             btnTotalPrice = new Button();
+            lstProducts = new ListBox();
             SuspendLayout();
             // 
             // label1
@@ -145,7 +146,7 @@
             // 
             // btnAddProduct
             // 
-            btnAddProduct.Location = new Point(308, 40);
+            btnAddProduct.Location = new Point(312, 64);
             btnAddProduct.Name = "btnAddProduct";
             btnAddProduct.Size = new Size(103, 45);
             btnAddProduct.TabIndex = 8;
@@ -155,7 +156,7 @@
             // 
             // btnUpdateProduct
             // 
-            btnUpdateProduct.Location = new Point(308, 93);
+            btnUpdateProduct.Location = new Point(312, 116);
             btnUpdateProduct.Name = "btnUpdateProduct";
             btnUpdateProduct.Size = new Size(103, 45);
             btnUpdateProduct.TabIndex = 9;
@@ -165,7 +166,7 @@
             // 
             // btnLookupProduct
             // 
-            btnLookupProduct.Location = new Point(308, 146);
+            btnLookupProduct.Location = new Point(312, 168);
             btnLookupProduct.Name = "btnLookupProduct";
             btnLookupProduct.Size = new Size(103, 45);
             btnLookupProduct.TabIndex = 10;
@@ -175,7 +176,7 @@
             // 
             // btnProcessSale
             // 
-            btnProcessSale.Location = new Point(308, 199);
+            btnProcessSale.Location = new Point(312, 220);
             btnProcessSale.Name = "btnProcessSale";
             btnProcessSale.Size = new Size(103, 45);
             btnProcessSale.TabIndex = 11;
@@ -193,6 +194,15 @@
             btnTotalPrice.Text = "Total Price";
             btnTotalPrice.UseVisualStyleBackColor = true;
             btnTotalPrice.Click += btnTotalPrice_Click;
+            // 
+            // lstProducts
+            // 
+            lstProducts.FormattingEnabled = true;
+            lstProducts.ItemHeight = 15;
+            lstProducts.Location = new Point(22, 44);
+            lstProducts.Name = "lstProducts";
+            lstProducts.Size = new Size(263, 214);
+            lstProducts.TabIndex = 12;
             // 
             // Form1
             // 
@@ -216,8 +226,10 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
+            Controls.Add(lstProducts);
             Name = "Form1";
             Text = "Form1";
+            Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -232,14 +244,3 @@
         private Label label6;
         private TextBox txtId;
         private TextBox txtName;
-        private TextBox txtCategory;
-        private TextBox txtPrice;
-        private TextBox txtStock;
-        private TextBox txtQuantity;
-        private Button btnAddProduct;
-        private Button btnUpdateProduct;
-        private Button btnLookupProduct;
-        private Button btnProcessSale;
-        private Button btnTotalPrice;
-    }
-}

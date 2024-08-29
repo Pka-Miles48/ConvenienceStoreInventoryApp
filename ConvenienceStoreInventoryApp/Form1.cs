@@ -156,5 +156,11 @@ namespace ConvenienceStoreInventoryApp
             txtStock.Clear();
             txtQuantity.Clear();
         }
+
+        // Event handler for form load
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            List<Product> products = ProductDb.GetAllProducts();
+        }
     }
 }
