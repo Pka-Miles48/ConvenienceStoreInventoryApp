@@ -146,7 +146,6 @@ namespace ConvenienceStoreInventoryApp
             }
         }
 
-
         // Method to clear the input fields
         private void ClearInputFields()
         {
