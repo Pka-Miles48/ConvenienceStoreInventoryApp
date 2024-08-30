@@ -9,26 +9,38 @@ namespace ConvenienceStoreInventoryApp
 {
     static public class ProductDb
     {
-        static ProductsContext context = new ProductsContext();
         public static void Add(Products product)
         {
+            ProductsContext context = new ProductsContext();
             context.Products.Add(product);
             context.SaveChanges();
         }
 
         public static List<Products> GetAllProducts()
         {
+            ProductsContext context = new ProductsContext();
             return context.Products.ToList();
         }
 
         public static void Update(Products product)
         {
-            context.Update(product);
-            context.SaveChanges();
+            using var context = new ProductsContext();
+            var existingProduct = context.Products.Find(product.ProductId);
+            if (existingProduct != null)
+            {
+                context.Entry(existingProduct).CurrentValues.SetValues(product);
+                context.SaveChanges();
+            }
+            else
+            {
+                // Handle the case where the product does not exist in the database
+                throw new ArgumentException("Product not found");
+            }
         }
 
         public static void Delete(Products product)
         {
+            ProductsContext context = new ProductsContext();
             context.Remove(product);
             context.SaveChanges();
         }
@@ -38,6 +50,7 @@ namespace ConvenienceStoreInventoryApp
             Products product = GetProduct(id);
             if (product != null)
             {
+                ProductsContext context = new ProductsContext();
                 context.Remove(product);
                 context.SaveChanges();
             }
@@ -46,6 +59,7 @@ namespace ConvenienceStoreInventoryApp
 
         public static Products? GetProduct(int id)
         {
+            ProductsContext context = new ProductsContext();
             return context.Products.Find(id);
         }
     }

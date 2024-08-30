@@ -23,30 +23,29 @@ namespace ConvenienceStoreInventoryApp
             return Convert.ToDouble(box);
         }
 
-        public static bool ValidTextInput (string name, double price, double quantity, string category, string description)
+        public static bool ValidTextInput(string name, string price, string quantity, string category, string description)
         {
-            if (name == null)
+            if (string.IsNullOrWhiteSpace(name))
             {
                 MessageBox.Show("Enter a valid Product Name.");
                 return false;
             }
-            else if (price <= 0)
+            else if (!double.TryParse(price, out double parsedPrice) || parsedPrice <= 0)
             {
-                MessageBox.Show("Enter a valid or non negative Product Price.");
+                MessageBox.Show("Enter a valid, non-negative Product Price.");
                 return false;
             }
-            else if (quantity <= 0)
+            else if (!double.TryParse(quantity, out double parsedQuantity) || parsedQuantity <= 0)
             {
-                MessageBox.Show("Enter a valid of non negative quantity.");
+                MessageBox.Show("Enter a valid, non-negative quantity.");
                 return false;
             }
-            else if (category == null)
+            else if (string.IsNullOrWhiteSpace(category))
             {
                 MessageBox.Show("Enter a valid category name.");
                 return false;
             }
-
-            else if (description == null)
+            else if (string.IsNullOrWhiteSpace(description))
             {
                 MessageBox.Show("Enter a valid description.");
                 return false;
@@ -55,7 +54,8 @@ namespace ConvenienceStoreInventoryApp
             {
                 return true;
             }
-            
         }
+
+
     }
 }

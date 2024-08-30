@@ -24,6 +24,7 @@ namespace ConvenienceStoreInventoryApp
         {
             InitializeComponent();
             isUpdateMode = true; //Set to update mode
+            UpdatedProducts = product;
 
             btnAddProduct.Text = "Update Product";
             Text = "Update Product";
@@ -33,7 +34,7 @@ namespace ConvenienceStoreInventoryApp
             txtQuantity.Text = product.Quantity.ToString();
             txtCategory.Text = product.Categories;
             txtDescription.Text = product.Description;
-                        
+
         }
 
         private void AddProductForm_Load(object sender, EventArgs e)
@@ -43,31 +44,48 @@ namespace ConvenienceStoreInventoryApp
 
         private void btnAddProduct_Click(object sender, EventArgs e)
         {
-            //Get info from the form
-            Products? p = null;
-            try
+            if (Validator.ValidTextInput(txtProductName.Text, txtPrice.Text, 
+                txtQuantity.Text, txtCategory.Text, txtDescription.Text))
             {
-                p = new Products(txtProductName.Text, double.Parse(txtPrice.Text), 
-                    double.Parse(txtQuantity.Text), txtCategory.Text, txtDescription.Text);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error creating product: " + ex.Message);
-                return;
-            }
+                //Get info from the form
+                try
+                {
+                    if (isUpdateMode)
+                    {
+                        UpdatedProducts.Name = txtProductName.Text;
+                        UpdatedProducts.Price = double.Parse(txtPrice.Text);
+                        UpdatedProducts.Quantity = double.Parse(txtQuantity.Text);
+                        UpdatedProducts.Categories = txtCategory.Text;
+                        UpdatedProducts.Description = txtDescription.Text;
 
-            if (isUpdateMode)
-            {
-                ProductDb.Update(p);
-                MessageBox.Show("Product Updated Successfully!");
-                Close();
+                        ProductDb.Update(UpdatedProducts);
+                        MessageBox.Show("Product Updated Successfully!");
+                    }
+                    else
+                    {
+                        string name = txtProductName.Text;
+                        string price = txtPrice.Text;
+                        string quantity = txtQuantity.Text;
+                        string category = txtCategory.Text;
+                        string description = txtDescription.Text;
+
+                        Products newProduct = new Products(name, double.Parse(price), 
+                                       double.Parse(quantity), category, description);
+                        ProductDb.Add(newProduct);
+                        MessageBox.Show("Product Add Successfully!");
+                    }
+                    Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error adding product: Server issues");
+                }
             }
             else
             {
-                ProductDb.Add(p);
-                MessageBox.Show("Product Add Successfully!");
-                Close();
+                return;
             }
         }
     }
 }
+
