@@ -72,7 +72,7 @@ namespace ConvenienceStoreInventoryApp
         /// </summary>
         public string DisplayProductInfo()
         {
-            return $"Product Name: {Name}, Product Price: {Price}, and Quantity: {Quantity}.";
+            return $"Product Name: {Name}, Product Price: ${Price}, and Quantity: ({Quantity}) \nCategory: {Categories}, Description: {Description}";
         }
 
 

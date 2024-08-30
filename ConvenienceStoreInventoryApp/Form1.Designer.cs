@@ -31,7 +31,7 @@
             btnAddProduct = new Button();
             btnUpdateProduct = new Button();
             btnRemoveProduct = new Button();
-            lstTextBox = new ListBox();
+            lstProducts = new ListBox();
             SuspendLayout();
             // 
             // btnAddProduct
@@ -52,6 +52,7 @@
             btnUpdateProduct.TabIndex = 1;
             btnUpdateProduct.Text = "Update Product";
             btnUpdateProduct.UseVisualStyleBackColor = true;
+            btnUpdateProduct.Click += btnUpdateProduct_Click;
             // 
             // btnRemoveProduct
             // 
@@ -61,27 +62,29 @@
             btnRemoveProduct.TabIndex = 2;
             btnRemoveProduct.Text = "Remove Product";
             btnRemoveProduct.UseVisualStyleBackColor = true;
+            btnRemoveProduct.Click += btnRemoveProduct_Click;
             // 
-            // lstTextBox
+            // lstProducts
             // 
-            lstTextBox.FormattingEnabled = true;
-            lstTextBox.ItemHeight = 15;
-            lstTextBox.Location = new Point(207, 37);
-            lstTextBox.Name = "lstTextBox";
-            lstTextBox.Size = new Size(400, 199);
-            lstTextBox.TabIndex = 3;
+            lstProducts.FormattingEnabled = true;
+            lstProducts.ItemHeight = 15;
+            lstProducts.Location = new Point(231, 46);
+            lstProducts.Name = "lstProducts";
+            lstProducts.Size = new Size(649, 289);
+            lstProducts.TabIndex = 3;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(631, 432);
-            Controls.Add(lstTextBox);
+            ClientSize = new Size(1050, 432);
+            Controls.Add(lstProducts);
             Controls.Add(btnRemoveProduct);
             Controls.Add(btnUpdateProduct);
             Controls.Add(btnAddProduct);
             Name = "Form1";
             Text = "Form1";
+            Load += Form1_Load;
             ResumeLayout(false);
         }
 
@@ -90,6 +93,6 @@
         private Button btnAddProduct;
         private Button btnUpdateProduct;
         private Button btnRemoveProduct;
-        private ListBox lstTextBox;
+        private ListBox lstProducts;
     }
 }

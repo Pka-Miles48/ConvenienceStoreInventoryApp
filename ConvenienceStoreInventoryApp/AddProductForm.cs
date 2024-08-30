@@ -12,9 +12,28 @@ namespace ConvenienceStoreInventoryApp
 {
     public partial class AddProductForm : Form
     {
+        private bool isUpdateMode;
+        private Products UpdatedProducts;
         public AddProductForm()
         {
             InitializeComponent();
+            isUpdateMode = false; //Default mode is add mode
+        }
+
+        public AddProductForm(Products product)
+        {
+            InitializeComponent();
+            isUpdateMode = true; //Set to update mode
+
+            btnAddProduct.Text = "Update Product";
+            Text = "Update Product";
+
+            txtProductName.Text = product.Name;
+            txtPrice.Text = product.Price.ToString();
+            txtQuantity.Text = product.Quantity.ToString();
+            txtCategory.Text = product.Categories;
+            txtDescription.Text = product.Description;
+                        
         }
 
         private void AddProductForm_Load(object sender, EventArgs e)
@@ -37,11 +56,18 @@ namespace ConvenienceStoreInventoryApp
                 return;
             }
 
-            ProductsContext context = new ProductsContext();
-            context.Products.Add(p);
-            context.SaveChanges();
-
-
+            if (isUpdateMode)
+            {
+                ProductDb.Update(p);
+                MessageBox.Show("Product Updated Successfully!");
+                Close();
+            }
+            else
+            {
+                ProductDb.Add(p);
+                MessageBox.Show("Product Add Successfully!");
+                Close();
+            }
         }
     }
 }
