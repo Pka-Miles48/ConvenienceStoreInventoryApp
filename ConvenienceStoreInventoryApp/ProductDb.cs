@@ -1,41 +1,53 @@
-﻿using System;
+﻿using ConvenienceStoreInventoryApp.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ConvenienceStoreInventoryApp;
 
 namespace ConvenienceStoreInventoryApp
 {
     static public class ProductDb
     {
+        static ProductsContext context = new ProductsContext();
         public static void Add(Product product)
         {
-            throw new NotImplementedException();
+            context.Add(product);
+            context.SaveChanges();
         }
 
         public static List<Product> GetAllProducts()
         {
-            return new List<Product>();
+            return context.Products.ToList();
         }
 
         public static void Update(Product product)
         {
-            throw new NotImplementedException();
+            context.Update(product);
+            context.SaveChanges();
         }
 
         public static void Delete(Product product)
         {
-            throw new NotImplementedException();
+            context.Remove(product);
+            context.SaveChanges();
         }
 
         public static void Delete(int id)
         {
-            throw new NotImplementedException();
+            Product product = GetProduct(id);
+            if (product != null)
+            {
+                context.Remove(product);
+                context.SaveChanges();
+            }
         }
 
-        public static void GetProduct(int id)
+
+        public static Product? GetProduct(int id)
         {
-            throw new NotImplementedException();
+            return context.Products.Find(id);
         }
     }
 }
