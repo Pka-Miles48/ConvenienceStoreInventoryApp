@@ -1,5 +1,4 @@
-﻿using ConvenienceStoreInventoryApp.Classes;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -26,10 +25,10 @@ namespace ConvenienceStoreInventoryApp
         private void btnAddProduct_Click(object sender, EventArgs e)
         {
             //Get info from the form
-            Product p = null;
+            Products? p = null;
             try
             {
-                p = new Product(txtProductName.Text, double.Parse(txtPrice.Text), 
+                p = new Products(txtProductName.Text, double.Parse(txtPrice.Text), 
                     double.Parse(txtQuantity.Text), txtCategory.Text, txtDescription.Text);
             }
             catch (Exception ex)
@@ -37,7 +36,10 @@ namespace ConvenienceStoreInventoryApp
                 MessageBox.Show("Error creating product: " + ex.Message);
                 return;
             }
-            ProductDb.Add(p);
+
+            ProductsContext context = new ProductsContext();
+            context.Products.Add(p);
+            context.SaveChanges();
 
 
         }

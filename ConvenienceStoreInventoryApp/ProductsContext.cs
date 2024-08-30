@@ -23,6 +23,6 @@ namespace ConvenienceStoreInventoryApp
             options.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=ConvenienceStoreInventoryDb;Trusted_Connection=True;");
         }
 
-        public DbSet<Classes.Product> Products { get; set; }
+        public DbSet<Products> Products { get; set; }
     }
 }
